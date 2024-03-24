@@ -1,0 +1,813 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+
+    /* PRIMARY COLORS */
+
+    --nutmeg: hsl(14, 45%, 36%);
+    --dark-raspberry: hsl(332, 51%, 32%);
+
+    /* NEUTRAL COLORS */
+
+    --white: hsl(0, 0%, 100%);
+    --rose-white: hsl(330, 100%, 98%);
+    --eggshell: hsl(31, 53%, 90%);
+    --light-grey: hsl(30, 18%, 87%);
+    --wenge-brown: hsl(30, 10%, 34%);
+    --dark-charcoal: hsl(24, 5%, 18%);
+
+}
+
+body{
+    width: 100%;
+    height: 1900px;
+    background-color: var(--eggshell);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body .recipe-card{
+    width: 736px;
+    height: 1708px;
+    background-color: var(--white);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border: 0;
+    border-radius: 20px;
+
+    padding: 40px;
+}
+
+body .recipe-card .recipe-image{
+    width: 656px;
+    height: 300px;
+    background: url(./image-omelette.jpeg);
+    background-size: contain;
+
+    border: 0;
+    border-radius: 10px;
+}
+
+body .recipe-card .recipe-title{
+    font-size: 20px;
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+}
+
+body .recipe-card .recipe-description{
+    font-size: 16px;
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+
+    color: var(--dark-charcoal);
+}
+
+/* RECIPE PREPARATION TIME */ 
+
+body .recipe-card .preparation-time{
+    width: 100%;
+    height: 160px;
+    background-color: var(--rose-white);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    padding: 20px;
+}
+
+body .recipe-card .preparation-time h2{
+    height: 30px;
+
+    font-size: 18px;
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+
+    color: var(--dark-raspberry);
+}
+
+body .recipe-card .preparation-time ul{
+    height: 100px;
+
+    font-size: 16px;
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    list-style: none;
+    padding: 10px 5px;
+}
+
+
+body .recipe-card .preparation-time ul li::before{
+    content: "\2022";
+    color: var(--dark-raspberry);
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+body .recipe-card .preparation-time ul li span{
+    font-weight: 600;
+}
+
+/* RECIPE INGREDIENTS */
+
+body .recipe-card .recipe-ingredients{
+    width: 100%;
+    height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+body .recipe-card .recipe-ingredients h2{
+    height: 30px;
+
+    font-size: 24px;
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+
+    color: var(--nutmeg);
+}
+
+body .recipe-card .recipe-ingredients ul{
+    width: 100%;
+    height: 160px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    padding: 10px;
+
+    list-style: none;
+
+    font-family: "Outfit", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+body .recipe-card .recipe-ingredients ul li{
+    height: 15px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+body .recipe-card .recipe-ingredients ul li::before{
+    content: "\2022";
+    color: var(--dark-raspberry);
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+/* RECIPE INSTRUCTIONS */
+
+body .recipe-card .recipe-instructions{
+    width: 100%;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+body .recipe-card .recipe-instructions h2{
+    height: 30px;
+
+    font-size: 24px;
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+
+    color: var(--nutmeg);
+}
+
+body .recipe-card .recipe-instructions ol{
+    width: 90%;
+    height: 250px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    font-family: "Outfit", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: .1px;
+
+    margin-left: 20px;
+}
+body .recipe-card .recipe-instructions ol li{
+    padding-left: 15px;
+}
+
+body .recipe-card .recipe-instructions ol li span{
+    font-weight: 600;
+}
+
+/* RECIPE NUTRITION */
+
+body .recipe-card .recipe-nutrition{
+    width: 100%;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+body .recipe-card .recipe-nutrition h2{
+    height: 30px;
+
+    font-size: 24px;
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+
+    color: var(--nutmeg);
+}
+
+body .recipe-card .recipe-nutrition h3{
+    height: 20px;
+    font-size: 16px;
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+
+    color: var(--dark-charcoal);
+}
+
+body .recipe-card .recipe-nutrition table{
+    width: 100%;
+    height: 200px;
+
+    text-align: left;
+}
+
+body .recipe-card .recipe-nutrition table th{
+    width: 50%;
+    font-size: 16px;
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+
+    padding-left: 20px;
+}
+
+body .recipe-card .recipe-nutrition table td{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Outfit", sans-serif;
+    color: var(--dark-raspberry);
+}
+
+body .recipe-card .recipe-nutrition table th, td{
+    height: 25px;
+    border-bottom: 1px solid lightgray;
+}
+
+body .recipe-card .recipe-nutrition .bottom-row th{
+    height: 25px;
+    border: 0;
+}
+body .recipe-card .recipe-nutrition .bottom-row td{
+    height: 25px;
+    border: 0;
+}
+
+/* !!! MEDIA QUERIES !!! */
+
+@media screen and (max-width: 320px){
+    body{
+        width: 100%;
+        height: auto;
+    }
+    body .recipe-card{
+        width: 100%;
+        height: 1800px;
+        
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+       border-radius: 0;
+    }
+
+    body .recipe-card .recipe-image{
+        width: 100%;
+        height: 147px;
+        background: url(./image-omelette.jpeg) no-repeat;
+        background-size: contain;
+
+        border-radius: 0;
+    }
+
+    body .recipe-card .recipe-title{
+        font-size: 16px;
+        font-family: "Young Serif", serif;
+        font-weight: 400;
+
+        padding: 0px 20px;
+    }
+    
+    body .recipe-card .recipe-description{
+        font-size: 14px;
+        font-family: "Outfit", sans-serif;
+        font-weight: 600;
+        line-height: 20px;
+    
+        color: var(--dark-charcoal);
+
+        padding: 0px 20px;
+    }
+    body .recipe-card .preparation-time{
+        scale: 0.9;
+        border-radius: 10px;
+    }
+    
+    body .recipe-card .preparation-time h2{
+        height: 20px;
+    
+        font-size: 18px;
+        font-family: "Outfit", sans-serif;
+        font-weight: 600;
+    
+        color: var(--dark-raspberry);
+    }
+    
+    body .recipe-card .preparation-time ul{
+        height: 100px;
+    
+        font-size: 18px;
+        font-family: "Outfit", sans-serif;
+        font-weight: 400;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+        list-style: none;
+        padding: 10px 5px;
+    }
+    
+    
+    body .recipe-card .preparation-time ul li::before{
+        content: "\2022";
+        color: var(--dark-raspberry);
+        font-size: 20px;
+        margin-right: 20px;
+    }
+    
+    body .recipe-card .preparation-time ul li span{
+        font-weight: 600;
+    }
+    body .recipe-card .recipe-ingredients{
+        width: 100%;
+        height: 200px;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        padding: 0px 20px;
+    }
+    body .recipe-card .recipe-ingredients h2{
+        height: 30px;
+    
+        font-size: 24px;
+        font-family: "Young Serif", serif;
+        font-weight: 400;
+        letter-spacing: 1.2px;
+    
+        color: var(--nutmeg);
+    }
+    
+    body .recipe-card .recipe-ingredients ul{
+        width: 100%;
+        height: 190px;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    
+        padding: 10px;
+    
+        list-style: none;
+    
+        font-family: "Outfit", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    
+    body .recipe-card .recipe-ingredients ul li{
+        height: 15px;
+        line-height: 18px;
+    
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    body .recipe-card .recipe-ingredients ul li::before{
+        content: "\2022";
+        color: var(--dark-raspberry);
+        font-size: 20px;
+        margin-right: 20px;
+    }
+
+    body .recipe-card .recipe-instructions{
+        width: 100%;
+        height: 520px;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        padding: 0px 20px;
+    
+    }
+    
+    body .recipe-card .recipe-instructions h2{
+        height: 30px;
+    
+        font-size: 24px;
+        font-family: "Young Serif", serif;
+        font-weight: 400;
+        letter-spacing: 1.2px;
+    
+        color: var(--nutmeg);
+    }
+    
+    body .recipe-card .recipe-instructions ol{
+        width: 90%;
+        height: 470px;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    
+        font-family: "Outfit", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: .1px;
+    
+        margin-left: 20px;
+    }
+    body .recipe-card .recipe-instructions ol li{
+        padding-left: 15px;
+        line-height: 18px;
+    }
+    
+    body .recipe-card .recipe-instructions ol li span{
+        font-weight: 600;
+    }
+
+    /* RECIPE NUTRITION */
+
+    body .recipe-card .recipe-nutrition{
+        width: 100%;
+        height: 280px;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        padding: 0px 20px;
+    }
+    
+    body .recipe-card .recipe-nutrition h2{
+        height: 20px;
+    
+        font-size: 24px;
+        font-family: "Young Serif", serif;
+        font-weight: 400;
+        letter-spacing: 1.2px;
+    
+        color: var(--nutmeg);
+    }
+    
+    body .recipe-card .recipe-nutrition h3{
+        height: 20px;
+        font-size: 15px;
+        font-family: "Outfit", sans-serif;
+        font-weight: 400;
+    
+        color: var(--dark-charcoal);
+    }
+    
+    body .recipe-card .recipe-nutrition table{
+        width: 100%;
+        height: 200px;
+    
+        text-align: left;
+    }
+    
+    body .recipe-card .recipe-nutrition table th{
+        width: 50%;
+        font-size: 16px;
+        font-family: "Outfit", sans-serif;
+        font-weight: 400;
+    
+        padding-left: 20px;
+    }
+    
+    body .recipe-card .recipe-nutrition table td{
+        font-size: 16px;
+        font-weight: 600;
+        font-family: "Outfit", sans-serif;
+        color: var(--dark-raspberry);
+    }
+    
+    body .recipe-card .recipe-nutrition table th, td{
+        height: 25px;
+        border-bottom: 1px solid lightgray;
+    }
+    body .recipe-card .recipe-nutrition .bottom-row th{
+        height: 25px;
+        border: 0;
+    }
+    body .recipe-card .recipe-nutrition .bottom-row td{
+        height: 25px;
+        border: 0;
+    }
+
+    
+}
+
+@media screen and (min-width: 321px) and (max-width: 767px){
+    body{
+        width: 100%;
+        height: auto;
+    }
+    body .recipe-card{
+        width: 100%;
+        height: 1800px;
+        
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+       border-radius: 0;
+    }
+
+    body .recipe-card .recipe-image{
+        width: 100%;
+        height: 180px;
+        background: url(./image-omelette.jpeg) no-repeat;
+        background-size: cover;
+
+        border-radius: 0;
+    }
+
+    body .recipe-card .recipe-title{
+        font-size: 16px;
+        font-family: "Young Serif", serif;
+        font-weight: 400;
+
+        padding: 0px 20px;
+    }
+    
+    body .recipe-card .recipe-description{
+        font-size: 14px;
+        font-family: "Outfit", sans-serif;
+        font-weight: 600;
+        line-height: 20px;
+    
+        color: var(--dark-charcoal);
+
+        padding: 0px 20px;
+    }
+    body .recipe-card .preparation-time{
+        scale: 0.9;
+        border-radius: 10px;
+    }
+    
+    body .recipe-card .preparation-time h2{
+        height: 20px;
+    
+        font-size: 18px;
+        font-family: "Outfit", sans-serif;
+        font-weight: 600;
+    
+        color: var(--dark-raspberry);
+    }
+    
+    body .recipe-card .preparation-time ul{
+        height: 100px;
+    
+        font-size: 18px;
+        font-family: "Outfit", sans-serif;
+        font-weight: 400;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+        list-style: none;
+        padding: 10px 5px;
+    }
+    
+    
+    body .recipe-card .preparation-time ul li::before{
+        content: "\2022";
+        color: var(--dark-raspberry);
+        font-size: 20px;
+        margin-right: 20px;
+    }
+    
+    body .recipe-card .preparation-time ul li span{
+        font-weight: 600;
+    }
+    body .recipe-card .recipe-ingredients{
+        width: 100%;
+        height: 200px;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        padding: 0px 20px;
+    }
+    body .recipe-card .recipe-ingredients h2{
+        height: 30px;
+    
+        font-size: 24px;
+        font-family: "Young Serif", serif;
+        font-weight: 400;
+        letter-spacing: 1.2px;
+    
+        color: var(--nutmeg);
+    }
+    
+    body .recipe-card .recipe-ingredients ul{
+        width: 100%;
+        height: 190px;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    
+        padding: 10px;
+    
+        list-style: none;
+    
+        font-family: "Outfit", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    
+    body .recipe-card .recipe-ingredients ul li{
+        height: 15px;
+        line-height: 18px;
+    
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    body .recipe-card .recipe-ingredients ul li::before{
+        content: "\2022";
+        color: var(--dark-raspberry);
+        font-size: 20px;
+        margin-right: 20px;
+    }
+
+    body .recipe-card .recipe-instructions{
+        width: 100%;
+        height: 520px;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        padding: 0px 20px;
+    
+    }
+    
+    body .recipe-card .recipe-instructions h2{
+        height: 30px;
+    
+        font-size: 24px;
+        font-family: "Young Serif", serif;
+        font-weight: 400;
+        letter-spacing: 1.2px;
+    
+        color: var(--nutmeg);
+    }
+    
+    body .recipe-card .recipe-instructions ol{
+        width: 90%;
+        height: 470px;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    
+        font-family: "Outfit", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: .1px;
+    
+        margin-left: 20px;
+    }
+    body .recipe-card .recipe-instructions ol li{
+        padding-left: 15px;
+        line-height: 18px;
+    }
+    
+    body .recipe-card .recipe-instructions ol li span{
+        font-weight: 600;
+    }
+
+    /* RECIPE NUTRITION */
+
+    body .recipe-card .recipe-nutrition{
+        width: 100%;
+        height: 280px;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        padding: 0px 20px;
+    }
+    
+    body .recipe-card .recipe-nutrition h2{
+        height: 20px;
+    
+        font-size: 24px;
+        font-family: "Young Serif", serif;
+        font-weight: 400;
+        letter-spacing: 1.2px;
+    
+        color: var(--nutmeg);
+    }
+    
+    body .recipe-card .recipe-nutrition h3{
+        height: 20px;
+        font-size: 15px;
+        font-family: "Outfit", sans-serif;
+        font-weight: 400;
+    
+        color: var(--dark-charcoal);
+    }
+    
+    body .recipe-card .recipe-nutrition table{
+        width: 100%;
+        height: 200px;
+    
+        text-align: left;
+    }
+    
+    body .recipe-card .recipe-nutrition table th{
+        width: 50%;
+        font-size: 16px;
+        font-family: "Outfit", sans-serif;
+        font-weight: 400;
+    
+        padding-left: 20px;
+    }
+    
+    body .recipe-card .recipe-nutrition table td{
+        font-size: 16px;
+        font-weight: 600;
+        font-family: "Outfit", sans-serif;
+        color: var(--dark-raspberry);
+    }
+    
+    body .recipe-card .recipe-nutrition table th, td{
+        height: 25px;
+        border-bottom: 1px solid lightgray;
+    }
+    body .recipe-card .recipe-nutrition .bottom-row th{
+        height: 25px;
+        border: 0;
+    }
+    body .recipe-card .recipe-nutrition .bottom-row td{
+        height: 25px;
+        border: 0;
+    }
+
+    body .recipe-card hr{
+        margin-top: 20px;
+    }
+}
+
+
+
